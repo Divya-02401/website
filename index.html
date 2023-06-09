@@ -7,12 +7,13 @@
 	<link rel="stylesheet" type="text/css" href="Bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="Bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="Bootstrap.rtl.css">
-	<link rel="stylesheet" type="text/css" href="Bootstrap.rtl.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.rtl.min.css">
 	<link rel="stylesheet" type="text/css" href="Bootstrap-grid.css">
 	<link rel="stylesheet" type="text/css" href="Bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="Bootstrap-grid.rtl.css">
 	<link rel="stylesheet" type="text/css" href="Bootstrap-grid.rtl.min.css">
 	<link rel="stylesheet" type="text/css" href="Bootstrap-reboot.css">
-	<link rel="stylesheet" type="text/css" href="Bootstrap-reboot.min">
+	<link rel="stylesheet" type="text/css" href="Bootstrap-reboot.min.css">
 	<link rel="stylesheet" type="text/css" href="Bootstrap-reboot.rtl.css">
 	<link rel="stylesheet" type="text/css" href="Bootstrap-reboot.rtl.min.css">
 	<link rel="stylesheet" type="text/css" href="Bootstrap-utilities.css">
@@ -25,28 +26,45 @@
 	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Lobster+Two:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
-	<div class="p-3 text-dark border border-dark">
-		<div class="row border border-light ">
-			<div class="col-2 mx-2">
+	<div class="p-3">
+		<div class="row border border-dark ">
+			<div class="col-auto  mx-2">
 				<!-- <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
       			<nav class="nav nav-pills flex-column"> -->
 				<p style= "font-family: 'Lobster Two', cursive; font-size: 30px;"> <a class="text-dark link-offset-2 link-underline link-underline-opacity-0 " href="#">Instagram</a></p><br><br>
-				<a class="link-underline link-underline-opacity-0 text-dark" href="#">
+					<a class="link-underline link-underline-opacity-0 text-dark" href="#">
 			    <i class="bi bi-house-door-fill" style="font-size:20px">&nbsp <b>Home</b> </i></a><br><br>
+
 			    <a class="link-underline link-underline-opacity-0 text-dark" href="#">
 			    <i class="bi bi-search" style="font-size:20px">  &nbsp Search</i></a><br><br>
 			    	
 			    <a class="link-underline link-underline-opacity-0 text-dark" href="#">
-			    <i class="bi bi-compass" style="font-size:20px">&nbsp Explore</i><br><br>
+			    <i class="bi bi-compass" style="font-size:20px">&nbsp Explore</i></a><br><br>
 			    		
-			    <a class="link-underline link-underline-opacity-0 text-dark " href="#">
-			    <i class="bi bi-messenger " style="font-size:20px">&nbsp message</i><br><br> 
+
+			    <div class="row">
+			    	<div class="col-2">
+			    <button class="icon-button">
+					<i class="bi bi-messenger "></i>
+					<span class="icon-button__badge">3</span>
+					</button>	</div>
+					<div class="col" style="font-size:20px">Messages</div>
+					</div>	
+			    <br> 
 			    		
 			    <a class="link-underline link-underline-opacity-0 text-dark" href="#">
 			    <i class="bi bi-plus-square" style="font-size:20px">&nbsp create</i><br><br>
-			    	
-			    <a class="link-underline link-underline-opacity-0 text-dark" href="#">
-			    <i class="bi bi-suit-heart" style="font-size:20px">  &nbsp Notifications</i></a><br><br>
+
+			    <div class="row">
+			    	<div class="col-2">
+			    		<button class="icon-button">
+							<i class="bi bi-suit-heart"></i>
+							<span class="icon-button_badge"></span>
+							</button>
+			    	</div>
+			    	<div class="col" style="font-size:20px"> Notifications</div>
+			    </div>
+			    <br>
 			    		
 			    <a class="link-underline link-underline-opacity-0 text-dark " href="#"><img src="images/8.jpg" width="30" height="30" class="rounded-circle">
 			   	&nbsp Profile</i></a><br><br><br><br><br>
@@ -54,7 +72,7 @@
 			    <a class="link-underline link-underline-opacity-0 text-dark" href="#">
 			    <i class="bi bi-list"style="font-size:20px">&nbsp More</i></a><br>
 			</div>
-			<div class="col-6 p-5">
+			<div class="col-auto p-5">
 				<div class="row">
 					<div class="col"><a href="#" class="link-underline link-underline-opacity-0 text-dark"><img src="images/6.jpg" width="60" height="60" class="rounded-circle border border-danger-subtle  border-4 "><figcaption><small>Claire..</small></figcaption></img></a></div>
 					<div class="col"><a href="#" class="link-underline link-underline-opacity-0 text-dark"><img src="images/10.jpg" width="60" height="60" class="rounded-circle border border-danger-subtle border-4 "><figcaption><small>Mr.Devil</small></figcaption></img></a></div>
@@ -71,88 +89,64 @@
 				</div><br>
 			
 				<!-- <div style="max-width: 18rem;"> -->
-					<div class=" row mx-5">
-						<div class="col-auto">
-							<a href="#" class="link-underline link-underline-opacity-0 text-dark">
-		      				<img alt="image" class="rounded rounded-circle" src="images/17.jpg" width="40" height="40"></img></a>
-						</div>
-						<div class="col-auto ">
-							<a href="#" class="link-underline link-underline-opacity-0 text-dark">
-		      				missie_lucky . &nbsp 55m</a>
-						</div>
-					</div>
-					<div class="row justify-content-md-center mx-5 my-2">
-						<a href="#" class="link-underline link-underline-opacity-0 text-dark ">
-		  	 			<img class="align-self-center" alt="post" src="images/7.jpg" width="300" height="300"></img></a>
-		  	 			<a href="#" class="text-dark link-underline link-underline-opacity-0"><i class="bi bi-heart"></i>&nbsp<i class="bi bi-chat"></i>&nbsp<i class="bi bi-send"></i> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<i class="bi bi-bookmark mx-5 "></i></a>
-					</div>
-					<div class="card-footer bg-transparent border-success mx-5">300 likes <br>
-					<b>  missie_lucky &nbsp</b><i>  Follow <a href="#">@artist.com</a>Rate this from 1-10! </i></div>
-					<div class="text-secondary mx-5">Add a comment...</div><hr>
-				<!--</div>--> <br>
 
-				<!-- <div style="max-width: 18rem;"> -->
-					<div class="row mx-5">
-						<div class="col-auto">
-							<a href="#" class="link-underline link-underline-opacity-0 text-dark">
-		      				<img alt="image" class="rounded rounded-circle" src="images/5.jpg" width="40" height="40"></img></a>
-						</div>
-						<div class="col-auto">
-							<a href="#" class="link-underline link-underline-opacity-0 text-dark">
-		      				Pretty Angel . &nbsp 2d</a>
-						</div>
-					</div>
-					<div class="row justify-content-md-center mx-5 my-2">
-						<a href="#" class="link-underline link-underline-opacity-0 text-dark ">
-		  	 			<img class="align-self-center" alt="post" src="images/14.jpg" width="300" height="300"></img></a>
-		  	 			<a href="#" class="text-dark link-underline link-underline-opacity-0"><i class="bi bi-heart"></i>&nbsp<i class="bi bi-chat"></i>&nbsp<i class="bi bi-send"></i> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<i class="bi bi-bookmark mx-5 "></i></a>
-					</div>
-					<div class="card-footer bg-transparent border-success mx-5"><img src="images/5.jpg" class="rounded-circle" width="15" height="15"><small>Liked by <b>moving_ship</b> &nbspand <b>300 others</b></small> <br>
-					</div>
-					<div class="text-secondary mx-5">Add a comment...</div><hr>
-				<!-- </div> --> <br>
+					
 
-				<!-- <div style="max-width: 18rem;"> -->
-					<div class=" row mx-5">
-						<div class="col-auto">
-							<a href="#" class="link-underline link-underline-opacity-0 text-dark">
-		      				<img alt="image" class="rounded rounded-circle" src="images/9.jpg" width="40" height="40"></img></a>
-						</div>
-						<div class="col-auto">
-							<a href="#" class="link-underline link-underline-opacity-0 text-dark">
-		      				Lil Cutie . &nbsp 3w</a>
-						</div>
-					</div>
-					<div class=" row justify-content-md-center mx-5 my-2">
-						<a href="#" class="link-underline link-underline-opacity-0 text-dark ">
-		  	 			<img class="align-self-center" alt="post" src="images/16.jpg" width="300" height="300"></img></a>
-		  	 			<a href="#" class="text-dark link-underline link-underline-opacity-0"><i class="bi bi-heart"></i>&nbsp<i class="bi bi-chat"></i>&nbsp<i class="bi bi-send"></i> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<i class="bi bi-bookmark mx-5 "></i></a>
-					</div>
-					<div class="card-footer bg-transparent border-success mx-5">500 likes <br>
-					</div>
-					<div class="text-secondary mx-5">Add a comment...</div>
-					<hr>
-				<!--</div> --><br>
-					<div class=" row mx-5">
-						<div class="col-auto">
-							<a href="#" class="link-underline link-underline-opacity-0 text-dark">
-		      				<img alt="image" class="rounded rounded-circle" src="images/1.jpg" width="40" height="40"></img></a>
-						</div>
-						<div class="col-auto ">
-							<a href="#" class="link-underline link-underline-opacity-0 text-dark">
-		      				floraflorish . &nbsp 5w</a>
-						</div>
-					</div>
-					<div class="row justify-content-md-center mx-5 my-2">
-						<a href="#" class="link-underline link-underline-opacity-0 text-dark ">
-		  	 			<img class="align-self-center" alt="post" src="images/2.jpg" width="300" height="300"></img></a>
-		  	 			<a href="#" class="text-dark link-underline link-underline-opacity-0"><i class="bi bi-heart"></i>&nbsp<i class="bi bi-chat"></i>&nbsp<i class="bi bi-send"></i> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<i class="bi bi-bookmark mx-5 "></i></a>
-					</div>
-					<div class="card-footer bg-transparent border-success mx-5"><img src ="images/3.jpg " class="rounded-circle" width ="15" height="15"></img><small>Liked by <b>mammia_1209</b> and 350 others</small><br>
-					<b>  floraflorish&nbsp</b><i> 📷 By <a href="#">@mammina_1209</a> Follow for more beautiful updates.</i></div>
-					<div class="text-secondary mx-5">Add a comment...</div>
 
-				<br>
+
+					<div class="card mx-auto border-0 border-light" style="width: 18rem">
+  					<div class="card-header bg-white border-0 border-light">
+  						<a href="#" class="link-underline link-underline-opacity-0 text-dark">
+   						<img src="images/10.jpg" width="40" height="40" class="rounded-circle "> Mr.devil  . 55m</a>
+  					</div>
+  					<div class="card-body">
+      				<a href="#" class="link-underline link-underline-opacity-0 text-dark"><img src="images/10.jpg"><br><i class="bi bi-heart"></i>&nbsp<i class="bi bi-chat"></i>&nbsp<i class="bi bi-send"></i>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<i class="bi bi-bookmark mx-4 "></i> </a>
+      				<small><p><img src="images/10.jpg" width="20" height="20">liked by mr.devil and 500 others<br><b>Mr.devil</b> #Smileyy</p>
+      				<footer> <cite class="text-secondary">view all 10 comments<br>Add a comment...</cite></footer></small>
+  					</div>
+					</div><hr>
+
+
+
+					<div class="card mx-auto border-0 border-light" style="width: 18rem">
+  					<div class="card-header bg-white border-0 border-light">
+  						<a href="#" class="link-underline link-underline-opacity-0 text-dark">
+   						<img src="images/17.jpg" width="40" height="40" class="rounded-circle ">  missie_lucky . &nbsp 55m</a>
+  					</div>
+  					<div class="card-body">
+      				<a href="#" class="link-underline link-underline-opacity-0 text-dark"><img src="images/7.jpg" width="250" height="250"><br><i class="bi bi-heart"></i>&nbsp<i class="bi bi-chat"></i>&nbsp<i class="bi bi-send"></i>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<i class="bi bi-bookmark mx-4"></i> </a>
+      				<small><p><img src="images/10.jpg" width="20" height="20">liked by xyz and 500 others<br><b>missie_lucky &nbsp</b>Follow <a href="#">@artist.com</a><br>Rate this from 1-10! </p>
+      				<footer> <cite class="text-secondary">view all 10 comments<br>Add a comment...</cite></footer></small>
+  					</div>
+					</div><hr>
+
+					<div class="card mx-auto border-0 border-light" style="width: 18rem">
+  					<div class="card-header bg-white border-0 border-light">
+  						<a href="#" class="link-underline link-underline-opacity-0 text-dark">
+   						<img src="images/5.jpg" width="40" height="40" class="rounded-circle "> Pretty Angel . &nbsp 2d</a>
+  					</div>
+  					<div class="card-body">
+      				<a href="#" class="link-underline link-underline-opacity-0 text-dark"><img src="images/14.jpg"><br><i class="bi bi-heart"></i>&nbsp<i class="bi bi-chat"></i>&nbsp<i class="bi bi-send"></i>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<i class="bi bi-bookmark mx-4 "></i> </a>
+      				<p><img src="images/14.jpg" width="15" height="15" class="rounded rounded-circle"><small>Liked by moving_ship and 300 others</p>
+      				<footer> <cite class="text-secondary">view all 5 comments<br>Add a comment...</cite></footer></small>
+  					</div>
+					</div><hr>
+
+
+					<div class="card mx-auto border-0 border-light" style="width: 18rem">
+  					<div class="card-header bg-white border-0 border-light">
+  						<a href="#" class="link-underline link-underline-opacity-0 text-dark">
+   						<img src="images/9.jpg" width="40" height="40" class="rounded-circle "> Lil Cutie . &nbsp 3w</a>
+  					</div>
+  					<div class="card-body">
+      				<a href="#" class="link-underline link-underline-opacity-0 text-dark"><img src="images/16.jpg"><br><i class="bi bi-heart"></i>&nbsp<i class="bi bi-chat"></i>&nbsp<i class="bi bi-send">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</i><i class="bi bi-bookmark mx-4 "></i> </a>
+      				<p><small>500 likes</p>
+      				<footer> <cite class="text-secondary">view all comments<br>Add a comment...</cite></footer></small>
+  					</div>
+					</div>	
+				<hr>
+
+
 			</div>
 			<div class="col p-5 ">
 				<div class="row">
@@ -180,7 +174,7 @@
 	  			</div>
 	  			<div class="col text-right mb-2">
 	    			<div>
-	      			<p><a class="link-underline link-underline-opacity-0" href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp See All</a></p>
+	      			<p><a class="link-underline link-underline-opacity-0" href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp See All</a></p>
 	    			</div>
 	  			</div>
 			</div>
@@ -246,5 +240,52 @@
 			</footer>
 		</div>
 	</div>
+
+
+<style>
+	.icon-button{
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: black;
+		border: white;
+		
+		border-radius: 50%;
+}
+.icon-button__badge{
+	position: absolute;
+	top: -5px;
+	right: -10px;
+	height: 15px;
+	width: 15px;
+	background: red;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+}
+.icon-button_badge{
+	position: absolute;
+	top: 2px;
+	right: -2px;
+	height: 8px;
+	width: 8px;
+	background: red;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: top;
+	border-radius: 50%;
+
+}
+
+
+
+
+</style>
+
+
 </body>
 </html>
