@@ -27,6 +27,7 @@ else
 if((percent>=50)&&(percent<60)){
 	document.write("Grade : D <br> Result : Passed")
 }
+else
 if((percent>=40)&&(percent<50)){
 	document.write("Grade : E <br> Result : Passed")
 }
