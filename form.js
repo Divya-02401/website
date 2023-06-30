@@ -24,12 +24,15 @@ if((percent>=60)&&(percent<70)){
 	document.write("Grade : C  <br> Result : Passed <br>");
 }
 else
-if((percent>=45)&&(percent<60)){
+if((percent>=50)&&(percent<60)){
 	document.write("Grade : D <br> Result : Passed")
+}
+if((percent>=40)&&(percent<50)){
+	document.write("Grade : E <br> Result : Passed")
 }
 else
 {
-	document.write("Result : Fail <br>")
+	document.write("Grade : F <br> Result : Fail <br>")
 }
 }
 
