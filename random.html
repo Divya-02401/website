@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Guess the number</title>
+</head>
+<body>
+	<p>Guess the number between 1 and 100</p>
+	<input type="text" id="userInput" placeholder="Enter a number"><br><br>
+	<button id="btn" onclick="fn1()">submit</button>
+	<p id="outputText"></p>
+	<p id="totalCount">You have only 10 chances to guess the right number.</p>
+	<script>
+		var Count=1;
+		var Limit=10;
+		var btn=document.getElementById('btn');
+		var output=document.getElementById('outputText');
+		var clk=document.getElementById('totalCount');
+		var randNum=Math.floor(Math.random()*100)
+		function fn1(){
+		var input=document.getElementById("userInput").value;
+		if(input==randNum){
+			output.innerHTML="your guess is right" 
+		}
+		else
+		if(input>randNum){
+			output.innerHTML="your guess is high, TRY AGAIN"
+		}
+		else
+		if(input<randNum){
+			output.innerHTML="your guess is low, TRY AGAIN"
+		}
+		if(Count<Limit){
+			clk.innerHTML=Count++;
+		}else
+				clk.innerHTML="limit exceeded, Try again"
+			}
+	
+	</script>
+
+	<script type="text/javascript" src="random.js"></script>
+</body>
+</html>
