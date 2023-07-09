@@ -11,6 +11,7 @@
 	<button id="btn" onclick="fn1()">submit</button>
 	<p id="outputText"></p>
 	<p id="totalCount">You have only 10 chances to guess the right number.</p>
+	<p id="number"></p>
 	<button id="reset" onclick="fn2()">Restart the game</button>
 	<script>
 		var Count=1;
@@ -38,6 +39,8 @@
 		}else{
 				clk.innerHTML="limit exceeded, Try again"
 			}
+		var number=document.getElementById('number').innerHTML="Input:"+input;
+		
 		var input=document.getElementById('userInput').value=' ';
 		if(Count==11){
 			btn.disabled=true;
@@ -48,11 +51,13 @@
 			else
 			{
 				reset.disabled=false;
-			}			
+			}
 		}
+
 		function fn2(){
 			window.location.reload(true);
 		}
+
 		
 	console.log("randNum"+randNum)
 	</script>
