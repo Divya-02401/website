@@ -4,16 +4,19 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Guess the number</title>
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
 </head>
-<body>
-	<p>Guess the number between 1 and 100</p>
-	<input type="text" id="userInput" placeholder="Enter a number"><br><br>
-	<button id="btn" onclick="fn1()">submit</button>
+<body class="p-3">
+	<p><b>Guess the number between 1 and 100</b></p>
+	<label for="userInput" class="form-label"><b> Enter a number:</b></label>
+	<input type="number" min="1" max="100" id="userInput" class="form-control" placeholder="Enter a number" ><br>
+	<button id="btn" onclick="fn1()" class="btn btn-primary">submit</button>
 	<p id="outputText"></p>
-	<p id="totalCount">You have only 10 chances to guess the right number.</p>
+	<p id="totalCount"><b>You have only 10 chances to guess the right number.</b></p>
 	<p id="userNumbers"><b></b></p>
 	<p id="number"></p>
-	<button id="reset" onclick="fn2()">Restart the game</button>
+	<button id="reset" onclick="fn2()" class="btn btn-primary">Restart the game</button>
 	<script>
 		var Count=1;
 		var Limit=11;
@@ -26,20 +29,20 @@
 		function fn1(){
 		var input=document.getElementById('userInput').value;
 		if(input==randNum){
-			output.innerHTML="your guess is right";
+			output.innerHTML="Your Guess is RIGHT";
 		}
 		else
 		if(input>randNum){
-			output.innerHTML="your guess is high, TRY AGAIN";
+			output.innerHTML="Your Guess is HIGH, Try Again";
 		}
 		else
 		if(input<randNum){
-			output.innerHTML="your guess is low, TRY AGAIN";
+			output.innerHTML="Your Guess is LOW, Try Again";
 		}
 		if(Count<Limit){
-			clk.innerHTML="trys:"+Count++;
+			clk.innerHTML="Trys:"+Count++;
 		}else{
-				clk.innerHTML="limit exceeded, Try again"
+				clk.innerHTML="Limit Exceeded, Try again"
 			}	
 		var userNum=document.getElementById('userNumbers').innerHTML="Input Values:";
 		var number=document.getElementById('number').innerHTML+=input +"<br>";
