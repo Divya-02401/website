@@ -11,11 +11,13 @@
 	<button id="btn" onclick="fn1()">submit</button>
 	<p id="outputText"></p>
 	<p id="totalCount">You have only 10 chances to guess the right number.</p>
+	<p id="userNumbers"><b></b></p>
 	<p id="number"></p>
 	<button id="reset" onclick="fn2()">Restart the game</button>
 	<script>
 		var Count=1;
 		var Limit=11;
+
 		var btn=document.getElementById('btn');
 		var output=document.getElementById('outputText');
 		var clk=document.getElementById('totalCount');
@@ -35,13 +37,14 @@
 			output.innerHTML="your guess is low, TRY AGAIN";
 		}
 		if(Count<Limit){
-			clk.innerHTML=Count++;
+			clk.innerHTML="trys:"+Count++;
 		}else{
 				clk.innerHTML="limit exceeded, Try again"
-			}
-		var number=document.getElementById('number').innerHTML="Input:"+input;
-		
+			}	
+		var userNum=document.getElementById('userNumbers').innerHTML="Input Values:";
+		var number=document.getElementById('number').innerHTML+=input +"<br>";
 		var input=document.getElementById('userInput').value=' ';
+		
 		if(Count==11){
 			btn.disabled=true;
 			}
@@ -58,7 +61,6 @@
 			window.location.reload(true);
 		}
 
-		
 	console.log("randNum"+randNum)
 	</script>
 	<script type="text/javascript" src="random.js"></script>
