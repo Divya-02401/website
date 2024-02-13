@@ -41,23 +41,23 @@ def hello1(request: Request):
     cursor.close()
     conn.close()  
   # return {json.dumps(students)}
-    api_url="http://localhost:8000/my-first-api"
-    form_data={
-    'param1':'name',
-    'param2':'course',
-    'param3':'roll no'
-    }
-    body = b"".join(
-    chunk
-    for chunk in form_data.body
-    )
-    response = requests.post(api_url, data=body, headers=form_data.headers)
-    if response.status_code == 200:
-        print("Form submitted successfully!")
-        print("Response:", response.text)
-    else:
-        print("Failed to submit form. Status code:", response.status_code)
-        print("Error message:", response.text)
+    # api_url="http://localhost:8000/my-first-api"
+    # form_data={
+    # 'param1':'name',
+    # 'param2':'course',
+    # 'param3':'roll no'
+    # }
+    # body = b"".join(
+    # chunk
+    # for chunk in form_data.body
+    # )
+    # response = requests.post(api_url, data=body, headers=form_data.headers)
+    # if response.status_code == 200:
+    #     print("Form submitted successfully!")
+    #     print("Response:", response.text)
+    # else:
+    #     print("Failed to submit form. Status code:", response.status_code)
+    #     print("Error message:", response.text)
   return templates.TemplateResponse("index.html", {"request": request,"data": students})
 
 @app.get("/my-second-api")
