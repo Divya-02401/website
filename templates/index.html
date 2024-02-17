@@ -46,26 +46,31 @@
         <h1 class="modal-title fs-5" id="exampleModalLabel">Add Student</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      <form action="/add-student" method="post">
       <div class="modal-body">
-        <form action="">
         <input type="text"class="form-control"
             placeholder="Enter Student Name"
             aria-label="Enter Student Name"
-            aria-describedby="basic-addon1" /> <br>
+            aria-describedby="basic-addon1"
+            name="name" /><br>
             <input type="text"class="form-control"
             placeholder="Enter Course "
             aria-label="Enter Course "
-            aria-describedby="basic-addon1" /> <br>
+            aria-describedby="basic-addon1" 
+            name="course"/> <br>
             <input type="text"class="form-control"
             placeholder="Enter Roll N0"
             aria-label="Enter Roll N0"
-            aria-describedby="basic-addon1" /> <br>
-          </form>
+            aria-describedby="basic-addon1"
+            name="rollno" /> <br>
+          
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-primary">Submit</button>
+      
       </div>
+      </form>
     </div>
   </div>
 </div>
@@ -84,18 +89,6 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-       <!-- <input type="text"class="form-control"
-            placeholder="Enter Student Name"
-            aria-label="Enter Student Name"
-            aria-describedby="basic-addon1" /> <br>
-            <input type="text"class="form-control"
-            placeholder="Enter Course "
-            aria-label="Enter Course "
-            aria-describedby="basic-addon1" /> <br>
-            <input type="text"class="form-control"
-            placeholder="Enter Roll N0"
-            aria-label="Enter Roll N0"
-            aria-describedby="basic-addon1" /> <br> -->
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -104,13 +97,6 @@
     </div>
   </div>
 </div>
-        <!-- <button type="button" class="btn btn-secondary float-end m-1">
-          Delete Student
-        </button> -->
-        <!-- <button type="button" class="btn btn-secondary float-end m-1">
-          Add Student
-        </button> -->
-      
       <select
         class="form-select form-select-sm"
         aria-label="Small select example"

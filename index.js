@@ -1,5 +1,5 @@
-let b=prompt("Hey, Whats the role you are applying for?")
-alert("Well.That's Great.All the best")
+// let b=prompt("Hey, Whats the role you are applying for?")
+// alert("Well.That's Great.All the best")
 
 //console.assert("3>12")
 //console.error("this is error")
@@ -25,5 +25,12 @@ alert("Well.That's Great.All the best")
 //}
 //document.write(a)
 //console.log(document.body)
-document.body.style.background = "violet"
+// document.body.style.background = "violet"
 //console.log(document.body.firstChild)
+
+const multiplicationTable=(number)=>{
+    for(i=1;i<11;i++){
+        console.log(`${number} * ${i} =${number*i}`)
+    }
+}
+multiplicationTable(34)
