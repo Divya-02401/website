@@ -41,24 +41,6 @@ def hello1(request: Request):
   finally:
     cursor.close()
     conn.close()  
-  # return {json.dumps(students)}
-    # api_url="http://localhost:8000/my-first-api"
-    # form_data={
-    # 'param1':'name',
-    # 'param2':'course',
-    # 'param3':'roll no'
-    # }
-    # body = b"".join(
-    # chunk
-    # for chunk in form_data.body
-    # )
-    # response = requests.post(api_url, data=body, headers=form_data.headers)
-    # if response.status_code == 200:
-    #     print("Form submitted successfully!")
-    #     print("Response:", response.text)
-    # else:
-    #     print("Failed to submit form. Status code:", response.status_code)
-    #     print("Error message:", response.text)
   return templates.TemplateResponse("index.html", {"request": request,"data": students})
 @app.post("/add-student")
 def add_student(name: str = Form(...), course: str = Form(...),rollno:str=Form(...)):
@@ -79,7 +61,22 @@ def add_student(name: str = Form(...), course: str = Form(...),rollno:str=Form(.
   return True  
 
 
-
+@app.post("/delete-student")
+def delete_student(rollno:str=Form(...)):
+  conn = sqlite3.connect("students")
+  cursor = conn.cursor()
+  try:
+      query = f"delete from students where (rollno) = ('{rollno}')"
+      print(query)
+      conn.execute('BEGIN')
+      cursor.execute(query)
+      conn.commit()
+  except Exception as e:
+      conn.rollback()
+  finally:
+      cursor.close()
+      conn.close()
+  return True
 
 
 
