@@ -21,7 +21,7 @@ except Exception as e:
 finally:
   cursor.close()
   conn.close()
-from fastapi import FastAPI, Form, Request
+from fastapi import FastAPI, Form, Query, Request
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 @app.get("/my-first-api")
@@ -42,6 +42,7 @@ def hello1(request: Request):
     cursor.close()
     conn.close()  
   return templates.TemplateResponse("index.html", {"request": request,"data": students})
+
 @app.post("/add-student")
 def add_student(name: str = Form(...), course: str = Form(...),rollno:str=Form(...)):
   conn=sqlite3.connect("students")
@@ -78,7 +79,27 @@ def delete_student(rollno:str=Form(...)):
       conn.close()
   return True
 
+@app.post("/select-course")
+async def search_student(request: Request, course_data: dict):
+  conn=sqlite3.connect("students")
+  cursor=conn.cursor()
+  students=[]
+  selected_course = course_data.get('course')
 
+  try:
+    query=f"select * from students where course = '{selected_course}'"
+    # print(query)
+    conn.execute('BEGIN')
+    cursor.execute(query)  
+    students=cursor.fetchall()
+    print(students)
+    conn.commit()
+  except Exception as e:
+    conn.rollback()
+  finally:
+    cursor.close()
+    conn.close()  
+  return students
 
 
 
@@ -101,7 +122,3 @@ def add():
 @app.get("/my-fourth-api")
 def hello(name: str):
   return {'Hello ' + name + '! Have a great day.'} 
-
-@app.get("/welcome-to-programming")
-def fun():
-  return{ "Okay, Everyone knows that the programming is fun. To learn programming you need to be smart, intelligent and brillant like Chetan Sharma---The Full Stack Developer at Deloitte. And he helped me in learning API'S. Thank You so much Chetan Sharma!"}

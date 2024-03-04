@@ -16,14 +16,8 @@
     <h1 style="text-align: center" class="bg-light fixed-top">Student Data</h1>
     <br />
     <br />
-    <table class="table m-3">
-      <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Course</th>
-        <th scope="col">Roll No</th>
-        <!-- Add more headers based on your table columns -->
-      </tr>
-      <div class="m-4">
+    <div class="m-4">
+      <form action="/search-student" method="post">
         <div class="input-group m-0">
           <input
             type="text"
@@ -31,109 +25,230 @@
             placeholder="Search"
             aria-label="Search"
             aria-describedby="basic-addon1"
+            name="search"
           />
-        </div>
-        <!-- button to create a Add Student Button -->
-        <!-- Button trigger modal -->
-<button type="button" class="btn btn-secondary float-end m-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Add student
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Student</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <form action="/add-student" method="post">
-      <div class="modal-body">
-        <input type="text"class="form-control"
-            placeholder="Enter Student Name"
-            aria-label="Enter Student Name"
-            aria-describedby="basic-addon1"
-            name="name" /><br>
-            <input type="text"class="form-control"
-            placeholder="Enter Course "
-            aria-label="Enter Course "
-            aria-describedby="basic-addon1" 
-            name="course"/> <br>
-            <input type="text"class="form-control"
-            placeholder="Enter Roll N0"
-            aria-label="Enter Roll N0"
-            aria-describedby="basic-addon1"
-            name="rollno" 
-        /> <br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
-      </form>
-    </div>
-  </div>
-</div>
-
-<!-- button to delete a student -->
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-secondary float-end m-1" data-bs-toggle="modal" data-bs-target="#deletestudent">
-  Delete Student
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="deletestudent" tabindex="-1" aria-labelledby="deletestudentmodal" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="deletestudentmodal">Delete Student</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <form action="/delete-student" method="post">
-        <div class="modal-body">
-          <input type="text"class="form-control"
-            placeholder="Enter Roll No"
-            aria-label="Enter Roll No"
-            aria-describedby="basic-addon1"
-            name="rollno" 
-          />
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary">Delete</button>
         </div>
       </form>
     </div>
-  </div>
-</div>
+    <!-- button to create a Add Student Button -->
+    <!-- Button trigger modal -->
+    <button
+      type="button"
+      class="btn btn-secondary float-end m-1"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      Add student
+    </button>
 
-
-
-<!-- to select from a list of items -->
-      <select
-        class="form-select form-select-sm"
-        aria-label="Small select example"
-      >
-      <div class="m-3">
-        <!-- <select class="form-select form-select-sm" aria-label="Small select example"> -->
-            <option selected="">Select any course</option>
-            <option value="1">Btech</option>
-            <option value="2">Mtech</option>
-            <option value="3">MBA</option>
-            <option value="3">MSC</option>
-            <option value="3">MCA</option>
-          <!-- </select> -->
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Add Student</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form action="/add-student" method="post">
+            <div class="modal-body">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Student Name"
+                aria-label="Enter Student Name"
+                aria-describedby="basic-addon1"
+                name="name"
+              /><br />
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Course "
+                aria-label="Enter Course "
+                aria-describedby="basic-addon1"
+                name="course"
+              />
+              <br />
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Roll N0"
+                aria-label="Enter Roll N0"
+                aria-describedby="basic-addon1"
+                name="rollno"
+              />
+              <br />
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
       </div>
+    </div>
+
+    <!-- button to delete a student -->
+    <!-- Button trigger modal -->
+    <button
+      type="button"
+      class="btn btn-secondary float-end m-1"
+      data-bs-toggle="modal"
+      data-bs-target="#deletestudent"
+    >
+      Delete Student
+    </button>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="deletestudent"
+      tabindex="-1"
+      aria-labelledby="deletestudentmodal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="deletestudentmodal">
+              Delete Student
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form action="/delete-student" method="post">
+            <div class="modal-body">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Roll No"
+                aria-label="Enter Roll No"
+                aria-describedby="basic-addon1"
+                name="rollno"
+              />
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="submit" class="btn btn-primary">Delete</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <br /><br />
+
+    <!-- to select from a list of items -->
+    <select
+      class="form-select form-select-sm"
+      aria-label="Small select example"
+      id="select-course"
+      onchange="selectCourse()"
+    >
+      <!-- <div class="m-3"> -->
+      <!-- <select class="form-select form-select-sm" aria-label="Small select example"> -->
+      <option>Select any course</option>
       {% for row in data %}
-      <tr>
-        <td>{{ row[0] }}</td>
-        <td>{{ row[1] }}</td>
-        <td>{{ row[2] }}</td>
-        <!-- Add more cells based on your table columns -->
-      </tr>
+      <option value="{{row[1]}}">{{row[1]}}</option>
+
+      <!-- Add more cells based on your table columns -->
+
       {% endfor %}
+      <!-- </select> -->
+      <!-- </div> -->
+    </select>
+    <table class="table m-3" id="studentsTable">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Course</th>
+          <th scope="col">Roll No</th>
+          <!-- Add more headers based on your table columns -->
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in data %}
+        <tr>
+          <td>{{ row[0] }}</td>
+          <td>{{ row[1] }}</td>
+          <td>{{ row[2] }}</td>
+          <!-- Add more cells based on your table columns -->
+        </tr>
+        {% endfor %}
+      </tbody>
     </table>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+      function selectCourse() {
+        console.log("inside function");
+        let selected_course = document.getElementById("select-course").value;
+        console.log(selected_course);
+        let url = `/select-course`;
+        fetch(url, {
+          method: "post",
+          body: JSON.stringify({ course: selected_course }),
+          headers: {
+            "content-type": "application/json",
+          },
+        })
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => {
+            const tableBody = document
+              .getElementById("studentsTable")
+              .getElementsByTagName("tbody")[0];
+
+            tableBody.innerHTML = "";
+
+            data.forEach((student) => {
+              const row = tableBody.insertRow();
+              const cell1 = row.insertCell(0);
+              const cell2 = row.insertCell(1);
+              const cell3 = row.insertCell(2);
+              console.log(student);
+              cell1.textContent = student[0];
+              cell2.textContent = student[1];
+              cell3.textContent = student[2];
+              // Add more cells and data fields as needed
+            });
+            console.log(data);
+          })
+          .catch((err) => {
+            console.log("error");
+          });
+      }
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
